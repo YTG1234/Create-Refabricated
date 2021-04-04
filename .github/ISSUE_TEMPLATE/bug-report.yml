@@ -1,0 +1,99 @@
+# I discovered that you can do this while looking at the MMC issue templates: https://github.com/MultiMC/MultiMC5/blob/develop/.github/ISSUE_TEMPLATE/bug_report.yml
+
+name: Bug Report
+description: No one likes bugs
+labels: [ bug ]
+title: "[BUG] "
+issue_body: false
+body:
+  - type: dropdown
+    attributes:
+      label: Type of bug
+      multiple: false
+      options:
+        - Crash
+        - Incompatibility
+        - Visual Glitch
+        - Other
+     validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: ""
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: To Reproduce
+      description: A bulleted or numbered list, or just plain text
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behaviour
+      description: A clear and concise description of what you expected to happen (e.g. description of what happens in the Forge version if the bug is only here).
+      placeholder: ""
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: "Attach a screenshot of the ⌥+⇧+F3 screen to help us see your performance stats."
+      placeholder: "If applicable, add additional screenshots to help explain your problem."
+  - type: text
+    attributes:
+      label: Fabric Loader version
+      placeholder: "e.g. `0.11.3`"
+    validations:
+      required: true
+  - type: text
+    attributes:
+      label: Fabric API version
+      placeholder: "e.g. `0.32.0+1.16`"
+    validations:
+      required: true
+   - type: text
+     attributes:
+       label: LibBlockAttributes version
+       placeholder: "e.g. `0.8.4`"
+     validations:
+       required: true
+   - type: text
+     attributes:
+       label: Cloth Config 2 version
+       placeholder: "e.g. `4.11.14`"
+     validations:
+       required: true
+   - type: text
+     attributes:
+       label: Commit hash
+       placeholder: "e.g. `c8b7bd4d7a065f29b02cb06b9a68f5a841c664a9`"
+     validations:
+       required: true
+   - type: textarea
+     attributes:
+       label: List of all other installed mods, including versionss
+       placeholder: |
+         Sodium: `0.1.0`
+         Indium: `1.0.0`
+     validations:
+       required: false
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: This issue is unique
+      options:
+      - label: I have searched the issues page and did not find an issue describing the same bug.
+        required: true  
